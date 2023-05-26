@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>paroller.js</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+
+</head>
+<section>
+
+    <!-- header -->
+    <div class="header">
+        <h6 class="text " data-paroller-factor="1" data-paroller-type="foreground" data-paroller-direction="horizontal"
+            data-paroller-transition="transform 2s linear">
+           Jun at the Front
+        </h6>
+        <h6 class="text paroller-example mt-3">
+            We are the best group we have a common cause
+
+        </h6>
+    </div>
+
+    <div class="overlayImg" style="background: url('./img/2.jpg') no-repeat center; background-size:cover"
+        data-paroller-factor="1.2"></div>
+
+    <!-- text wrap -->
+    <div class="wrap">
+        <div class="text">
+            <h1>We love web development</h1>
+        </div>
+
+        <div class="img text-center my-5"
+            style="background:url(./img/flatdesign-github-html-javascript-wallpaper-preview.jpg) no-repeat center; background-size:cover; margin: 80px 0;"
+            data-paroller-factor="-1"></div>
+    </div>
+
+    <!-- there -->
+    <div class="d-flex">
+        <div class="image" style="background:url(./img/4.jpg) no-repeat center; background-size:contain;"
+            data-paroller-factor="0.8"></div>
+        <div class="image" style="background:url(./img/5.jpg) no-repeat center; background-size:contain;"
+            data-paroller-factor="-0.1"></div>
+        <div class="image" style="background:url(./img/3.jpg) no-repeat center; background-size:contain;"
+            data-paroller-factor="-0.4"></div>
+    </div>
+
+    <!-- last -->
+    <div class="overlayImg">
+        <div class="image" style="background:url(./img/6.jpg) no-repeat center; background-size:contain;"
+            data-paroller-factor="0.25" data-paroller-direction="horizontal"></div>
+        <div class="image" style="background:url(./img/7.jpg) no-repeat center; background-size:contain;"
+            data-paroller-factor="-0.5" data-paroller-direction="horizontal"></div>
+        <div class="image" style="background:url(./img/8.jpg) no-repeat center; background-size:contain;"
+            data-paroller-factor="-0.5" data-paroller-direction="horizontal"></div>
+    </div>
+
+    <!-- footer -->
+    <h6 class="text footer" data-paroller-factor="0.1" data-paroller-factor-md="0.1" data
+        data-paroller-type="foreground" data-paroller-transition="transform 2s linear">
+        We love front-end development
+    </h6>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+<script src="js/jquery.paroller.js"></script> 
+
+<script>
+    $(document)
+        .ready(function () {
+            $('[data-paroller-factor]').paroller();
+            $('.paroller-example').paroller({
+                factorXs: 0.1,
+                factorSm: 0.1,
+                factorMd: -0.4,
+                factorLg: -0.5,
+                factorXl: -0.6,
+                factor: -0.4,
+                type: 'foreground',
+                direction: 'horizontal',
+                transition: 'transform .3s ease-out'
+            });
+        });
+</script>
+
+</body>
+
+</html>
